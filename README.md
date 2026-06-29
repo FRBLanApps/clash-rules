@@ -217,6 +217,8 @@ rules:
 
 ## 致谢
 
+- [@YadominJinta/clash-rules](https://github.com/YadominJinta/clash-rules)
+- [@Loyalsoldier/clash-rules](https://github.com/Loyalsoldier/clash-rules)
 - [@Loyalsoldier/geoip](https://github.com/Loyalsoldier/geoip)
 - [@Loyalsoldier/v2ray-rules-dat](https://github.com/Loyalsoldier/v2ray-rules-dat)
 - [@gfwlist/gfwlist](https://github.com/gfwlist/gfwlist)
