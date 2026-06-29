@@ -37,7 +37,7 @@ jobs:
       - name: Checkout the "hidden" branch
         uses: actions/checkout@v6
         with:
-          ref: hidden
+          ref: hidden_test
 
       - name: Generate icloud.txt file
         run: |
