@@ -147,9 +147,9 @@ jobs:
           draft: false
           prerelease: false
           files: |
-            ./publish/*.txt
-            ./publish/global-cloud-storage/*.txt
-            ./publish/ms/*.txt
+            ./publish/txt/*.txt
+            ./publish/txt/global-cloud-storage/*.txt
+            ./publish/txt/ms/*.txt
             ./publish/mrs/*.mrs
             ./publish/mrs/ms/*.mrs
             ./publish/mrs/global-cloud-storage/*.mrs
