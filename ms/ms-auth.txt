@@ -1,4 +1,6 @@
-login.live.com
-login.microsoftonline.com
-*.msftauth.net
-login.windows.net
+payload:
+- login.live.com
+- login.microsoftonline.com
+- "+.msftauth.net"
+- login.windows.net
+- oauth.live.com

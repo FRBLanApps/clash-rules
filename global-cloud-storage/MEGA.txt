@@ -1,4 +1,5 @@
-*.mega.io
-*.mega.nz
-*.mega.co.nz
-*.megapay.nz
+payload:
+- "+.mega.io"
+- "+.mega.nz"
+- "+.mega.co.nz"
+- "+.megapay.nz"

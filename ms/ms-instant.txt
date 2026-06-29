@@ -1,2 +1,3 @@
-*.skype
-teams.microsoft.com
+payload:
+- "+.skype"
+- teams.microsoft.com
