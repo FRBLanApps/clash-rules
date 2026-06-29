@@ -113,18 +113,31 @@ jobs:
           echo "payload:" > ms-365-instant.txt
           echo "payload:" > ms-365cidr.txt
           echo "payload:" > ms-365-instantcidr.txt
-          curl -sSL "${ms_365}" | python3 .github/ms_365_generator.py
+          curl -sSL "${ms_365}" | python3 ./.github/ms_365_generator.py
 
+      - name: temporary copy files for mrs conversion
+        run: |
+          cp ms/* 
+          cp global-cloud-storage/*
+      
       - name: Convert txt rulesets to mrs
         run: ./.github/convert_mrs.sh
 
+# todo: 优化这一坨屎山代码
       - name: Move files to publish directory
         run: |
           mkdir -p publish
-          cp *.txt ./publish/
+          mkdir -p publish/txt
+          cp -r global-cloud-storage ./publish/txt/
+          cp -r ms ./publish/txt/
+          mv ms-365.txt ms-365-instant.txt ms-365cidr.txt ms-365-instantcidr.txt ./publish/txt/ms/
+          rm ms-auth.txt ms-common.txt ms-instant.txt DropBox.txt MEGA.txt onedrive.txt
+          cp *.txt ./publish/txt/
+          mkdir -p ./publish/mrs/ms
+          mv /mrs/ms-365.mrs /mrs/ms-365-instant.mrs /mrs/ms-365cidr.mrs /mrs/ms-365-instantcidr.mrs /mrs/ms-auth.mrs /mrs/ms-common.mrs /mrs/ms-instant.mrs ./mrs/ms
+          mkdir -p ./publish/mrs/global-cloud-storage
+          mv /mrs/DropBox.mrs /mrs/MEGA.mrs /mrs/onedrive.mrs ./mrs/global-cloud-storage
           cp -r mrs ./publish/
-          cp -r global-cloud-storage ./publish/
-          cp -r ms ./publish/
 
       - name: Release and upload assets
         uses: softprops/action-gh-release@v3
@@ -135,7 +148,11 @@ jobs:
           prerelease: false
           files: |
             ./publish/*.txt
+            ./publish/global-cloud-storage/*.txt
+            ./publish/ms/*.txt
             ./publish/mrs/*.mrs
+            ./publish/mrs/ms/*.mrs
+            ./publish/mrs/global-cloud-storage/*.mrs
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
