@@ -1,0 +1,17 @@
+*.microsoft
+*.windows
+*.office
+*.azure
+*.xbox
+*.bing
+*.hotmail
+*.microsoft.com
+*.windows.com
+*.bing.com
+*.office.com
+*.msn.com
+*.outlook.com
+*.azure.com
+*.xbox.com
+*.xboxlive.com
+*.windowsupdate.com

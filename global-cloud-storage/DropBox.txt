@@ -1,0 +1,2 @@
+*.dropbox.com
+*.dl.dropboxusercontent.com
