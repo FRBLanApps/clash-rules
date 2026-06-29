@@ -117,8 +117,8 @@ jobs:
 
       - name: temporary copy files for mrs conversion
         run: |
-          cp ms/*.txt
-          cp global-cloud-storage/*.txt
+          cp ms/*.txt /
+          cp global-cloud-storage/*.txt /
       
       - name: Convert txt rulesets to mrs
         run: ./.github/convert_mrs.sh
