@@ -134,9 +134,9 @@ jobs:
           rm ms-auth.txt ms-common.txt ms-instant.txt DropBox.txt MEGA.txt onedrive.txt
           cp *.txt ./publish/txt/
           mkdir -p ./mrs/ms
-          mv /mrs/ms-365.mrs /mrs/ms-365-instant.mrs /mrs/ms-365cidr.mrs /mrs/ms-365-instantcidr.mrs /mrs/ms-auth.mrs /mrs/ms-common.mrs /mrs/ms-instant.mrs ./mrs/ms
+          mv ./mrs/ms-365.mrs ./mrs/ms-365-instant.mrs ./mrs/ms-365cidr.mrs ./mrs/ms-365-instantcidr.mrs ./mrs/ms-auth.mrs ./mrs/ms-common.mrs ./mrs/ms-instant.mrs ./mrs/ms
           mkdir -p ./mrs/global-cloud-storage
-          mv /mrs/DropBox.mrs /mrs/MEGA.mrs /mrs/onedrive.mrs ./mrs/global-cloud-storage
+          mv ./mrs/DropBox.mrs ./mrs/MEGA.mrs ./mrs/onedrive.mrs ./mrs/global-cloud-storage
           cp -r mrs ./publish/
 
       - name: Release and upload assets
