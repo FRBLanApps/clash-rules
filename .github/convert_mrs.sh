@@ -5,7 +5,7 @@ set -euo pipefail
 MIHOMO_DOWNLOAD_URL="${MIHOMO_URL:-https://github.com/MetaCubeX/mihomo/releases/download/v1.19.24/mihomo-linux-amd64-v3-v1.19.24.gz}"
 MIHOMO_CMD="${MIHOMO_CMD:-mihomo}"
 MRS_DIR="${MRS_DIR:-./mrs}"
-CIDR_FILES=("cncidr.txt" "lancidr.txt" "telegramcidr.txt")
+CIDR_FILES=("cncidr.txt" "lancidr.txt" "telegramcidr.txt" "ms-365cidr.txt" "ms-365-instantcidr.txt")
 SKIP_FILES=("applications.txt")
 
 install_mihomo() {

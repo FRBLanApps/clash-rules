@@ -1,2 +1,3 @@
-*.dropbox.com
-*.dl.dropboxusercontent.com
+payload:
+- "+.dropbox.com"
+- "+.dl.dropboxusercontent.com"

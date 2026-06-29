@@ -1,0 +1,59 @@
+[
+  {
+    "id": 12,
+    "serviceArea": "Skype",
+    "serviceAreaDisplayName": "Microsoft Teams",
+    "urls": [
+      "*.lync.com",
+      "*.teams.cloud.microsoft",
+      "*.teams.microsoft.com",
+      "teams.cloud.microsoft",
+      "teams.microsoft.com"
+    ],
+    "ips": [
+      "52.112.0.0/14",
+      "52.122.0.0/15"
+    ],
+    "tcpPorts": "80,443",
+    "udpPorts": "443",
+    "expressRoute": true,
+    "category": "Allow",
+    "required": true
+  },
+  {
+    "id": 46,
+    "serviceArea": "Common",
+    "serviceAreaDisplayName": "Microsoft 365 Common and Office Online",
+    "urls": [
+      "*.officeapps.live.com",
+      "*.online.office.com",
+      "office.live.com"
+    ],
+    "ips": [
+      "13.107.6.171/32",
+      "13.107.18.15/32",
+      "13.107.140.6/32",
+      "52.108.0.0/14",
+      "52.244.37.168/32"
+    ],
+    "tcpPorts": "80,443",
+    "expressRoute": true,
+    "category": "Allow",
+    "required": true
+  },
+  {
+    "id": 75,
+    "serviceArea": "Common",
+    "serviceAreaDisplayName": "Microsoft 365 Common and Office Online",
+    "urls": [
+      "*.sharepointonline.com",
+      "dc.services.visualstudio.com",
+      "mem.gfx.ms"
+    ],
+    "tcpPorts": "443",
+    "expressRoute": false,
+    "category": "Default",
+    "required": false,
+    "notes": "Graph.windows.net, Office 365 Management Pack for Operations Manager, SecureScore, Azure AD Device Registration, Forms, StaffHub, Application Insights, captcha services"
+  }
+]
