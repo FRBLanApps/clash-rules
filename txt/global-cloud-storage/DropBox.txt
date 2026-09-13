@@ -1,0 +1,3 @@
+payload:
+- "+.dropbox.com"
+- "+.dl.dropboxusercontent.com"
