@@ -1,0 +1,3 @@
+payload:
+- "+.skype"
+- teams.microsoft.com
